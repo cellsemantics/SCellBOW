@@ -24,7 +24,9 @@ The SCellBOW package is an implementation of Single-cell clustering and algebra 
 
 To install SCellBOW package you must make sure that your python version is 3.8 +. 
 
-#### Python packages:
+#### Prerequisites
+
+Python packages:
 - pandas = 0.22.0, 
 - numpy = 1.16.4, 
 - keras = 2.2.4, 
@@ -33,6 +35,23 @@ To install SCellBOW package you must make sure that your python version is 3.8 +
 - anndata = 0.6.20, 
 - natsort = 5.2.0, 
 - sklearn = 0.19.1
+
+#### Setup
+
+SCellBOW is included in PyPI, so you can install it by
+
+```bash
+
+```
+
+If for some reason this doesn't work, you can also download the package from Github and install it locally:
+
+```bash
+
+```
+
+
+
 
 
 
