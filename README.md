@@ -36,7 +36,7 @@ Python packages:
 - natsort = 5.2.0, 
 - sklearn = 0.19.1
 
-<br>
+
 
 ### Setup
 
