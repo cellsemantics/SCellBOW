@@ -66,6 +66,7 @@ Here is example usage of SCellBOW in Python:
 
 ## Contributing
 Souce code: [Github](https://github.com/eleozzr/desc)  
+For further information contact debarka@iiitd.ac.in or namrata.bhattacharya@hdr.qut.eu.au. 
 
 
 
