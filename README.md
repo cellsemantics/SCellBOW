@@ -10,7 +10,7 @@ SCellBOW is an unsupervised transfer learning algorithm for clustering scRNA-seq
 
 ## Usage
 
-The SCellBOW package is an implementation of Single-cell clustering and algebra using language model Doc2vec. With SCellBOW, the user can perform:
+The [SCellBOW](https://github.com/cellsemantics/SCellBOW) package is an implementation of Single-cell clustering and algebra using language model Doc2vec. With SCellBOW, the user can perform:
 
 - Preprocessing single-cell gene expression profiles.
 - Clustering of the target dataset by transfer learning the weights from the pre-trained model trained on the source dataset.
@@ -65,7 +65,7 @@ Here is example usage of SCellBOW in Python:
 
 
 ## Contributing
-Souce code: [Github](https://github.com/eleozzr/desc)  
+Souce code: [Github](https://github.com/cellsemantics/SCellBOW)  
 For further information contact debarka@iiitd.ac.in or namrata.bhattacharya@hdr.qut.eu.au. 
 
 
