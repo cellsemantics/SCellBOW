@@ -64,6 +64,9 @@ Here is example usage of SCellBOW in Python:
 ```
 
 
+## Contributing
+Souce code: [Github](https://github.com/eleozzr/desc)  
+
 
 
 
