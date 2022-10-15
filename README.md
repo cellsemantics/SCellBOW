@@ -1,2 +1,4 @@
-# SCellBOW
-Single cell RNA-seq analysis and transfer learning using language models
+# SCellBOW : Single-cell RNA-seq analysis and transfer learning using language models
+
+
+
