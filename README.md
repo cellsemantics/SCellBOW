@@ -49,7 +49,7 @@ SCellBOW is included in PyPI, so you can install it by
 If for some reason this doesn't work, you can also download the package from Github and install it locally:
 
 ```bash
-
+pip install -i https://test.pypi.org/simple/ SCellBOW0328
 ```
 <br>
 
