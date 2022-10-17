@@ -53,6 +53,21 @@ If for some reason this doesn't work, you can also download the package from Git
 ```
 <br>
 
+### The base SCellBOW functions
+
+```bash
+SCellBOW_pretrain(adata_source, save_dir, vec_size=300, n_worker=1, iter=20)
+```
+
+> Create the pre-trained model from the source dataset.
+> #### Input Arguments
+> The arguments are as follows:
+> - **adata_source:**  the preprocessed scanpy.anndata for source dataset
+> - **save_dir:** name of directory to save the source model
+> - **vec_size:** dimensionality of the embedding vectors. Defaults to 300 for SCellBOW. 
+> - **n_worker:** number of worker threads to train the model. For a fully deterministically-reproducible run, limit the model to one worker thread. Defaults to 1 for SCellBOW. 
+> - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
+
 ## API example usage
 
 For step-by-step tutorials on how SCellBOW can perform clustering and phenotypic algebra can be found in [Tutorial](https://eleozzr.github.io/desc/tutorial.html).
