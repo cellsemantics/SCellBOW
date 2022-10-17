@@ -65,32 +65,22 @@ Here is example usage of SCellBOW in Python:
 import SCellBOW as sb
 
 # List of datasets:
-adatas = [ list of scanpy.AnnData ]
-
-sb.SCellBOW_pretrain(adata, 
-                     save_dir, 
-                     vec_size=300, 
-                     n_worker=1, 
-                     iter=20)
+adata_source = [scanpy.AnnData for source dataset]
+adata_target = [scanpy.AnnData for source dataset]
+adata_bulkseq = [AnnData for bulk RNAseq dataset]
 
 
-adata_target = sb.SCellBOW_clust(adata_target,
-                                 save_dir,
-                                 iter=40,
-                                 resolution=1.0,
-                                 neighbors=15).run()
+# Creating pre-trained model from source dataset
+sb.SCellBOW_pretrain(adata_source, save_dir = 'path/to/model').run()
 
+# Retraining the model with target dataset  
+adata_target = sb.SCellBOW_clust(adata_target, save_dir = 'path/to/model').run()
 
-predicted_risk_score = sb.SCellBOW_algebra(adata_test,
-                                           adata_train,
-                                           "dd2",
-                                           Type="clusters",
-                                           bootstrap_samples=5,
-                                           n_top_features=50).run()
-
+# Predict the risk score for the subtypes in the target dataset
+predicted_risk_score = sb.SCellBOW_algebra(adata_target, adata_bulkseq, save_dir = 'path/to/model').run()
 
 ```
-
+<br>
 
 ## Contributing
 Souce code: [Github](https://github.com/cellsemantics/SCellBOW)  
