@@ -29,7 +29,7 @@ To install SCellBOW package you must make sure that your python version is 3.8 +
 Python packages:
 - pandas = 0.22.0, 
 - numpy = 1.16.4, 
-- keras = 2.2.4, 
+- gensim = 2.2.4, 
 - scipy = 1.0.1, 
 - scanpy = 1.3.1+21.g1df151f, 
 - anndata = 0.6.20, 
