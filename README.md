@@ -68,6 +68,37 @@ SCellBOW_pretrain(adata_source, save_dir, vec_size=300, n_worker=1, iter=20)
 > - **n_worker:** number of worker threads to train the model. For a fully deterministically-reproducible run, limit the model to one worker thread. Defaults to 1 for SCellBOW. 
 > - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
 
+```bash
+SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).run()
+```
+> Transfer learning the weights of pre-trained to obtain single-cell embeddings for the target dataset. 
+> #### Input Arguments
+> The arguments are as follows:
+> - **adata_target:**  the preprocessed scanpy.anndata for source dataset
+> - **save_dir:** name of directory where the source model is saved
+> - **resolution:** granularity of the leiden clustering. Defaults to 1.0 for SCellBOW. 
+> - **neighbors:** number of neighboring data points. Defaults to 15 for SCellBOW. 
+> - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
+
+```bash
+SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
+```
+> Rank the single cell clusters or subtypes based on their relative aggressiveness.
+> #### Input Arguments
+> The arguments are as follows:
+> - **adata_test:**  the unprocessed scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
+> - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
+> - **save_dir:** name of directory where the source model is saved
+> - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters)
+> - **bootstrap_samples:** number of bootstrap iterations. Defaults to 50 for SCellBOW. 
+> - **split:** split on single cell dataset. Defaults to 80:20 split for SCellBOW.
+> - **unit:** type of dataset UMI, TPM, FPKM, etc. Default to UMI for SCellBOW. 
+> - **n_top_features:** number of top common highly variables genes in bulk RNAseq and single cell RNAseq datasets. Defaults to 1000 for SCellBOW.
+> - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
+
+
+<br>
+
 ## API example usage
 
 For step-by-step tutorials on how SCellBOW can perform clustering and phenotypic algebra can be found in [Tutorial](https://eleozzr.github.io/desc/tutorial.html).
