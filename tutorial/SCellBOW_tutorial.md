@@ -91,17 +91,17 @@ adata_source = sc.read("/path/to/directory/adata_source.h5ad")
 
 
 ```python
-adata_train.var_names_make_unique()
-sc.pp.filter_cells(adata_train, min_genes=200)
-sc.pp.filter_genes(adata_train, min_cells=20)
+adata_source.var_names_make_unique()
+sc.pp.filter_cells(adata_source, min_genes=200)
+sc.pp.filter_genes(adata_source, min_cells=20)
 
-sc.pp.normalize_total(adata_train, target_sum=1e4)
-sc.pp.log1p(adata_train)
+sc.pp.normalize_total(adata_source, target_sum=1e4)
+sc.pp.log1p(adata_source)
     
-sc.pp.highly_variable_genes(adata_train, n_top_genes = 1000)
-adata_train = adata_train[:, adata_train.var.highly_variable]
+sc.pp.highly_variable_genes(adata_source, n_top_genes = 1000)
+adata_source = adata_source[:, adata_source.var.highly_variable]
 
-sc.pp.scale(adata_train, max_value=10)
+sc.pp.scale(adata_source, max_value=10)
 ```
 
 - ###  1.4. Call SCellBOW_pretrain()
@@ -122,17 +122,17 @@ adata_target = sc.read("/path/to/directory/adata_target.h5ad")
 
 
 ```python
-adata_train.var_names_make_unique()
-sc.pp.filter_cells(adata_train, min_genes=200)
-sc.pp.filter_genes(adata_train, min_cells=20)
+adata_target.var_names_make_unique()
+sc.pp.filter_cells(adata_target, min_genes=200)
+sc.pp.filter_genes(adata_target, min_cells=20)
 
-sc.pp.normalize_total(adata_train, target_sum=1e4)
-sc.pp.log1p(adata_train)
+sc.pp.normalize_total(adata_target, target_sum=1e4)
+sc.pp.log1p(adata_target)
     
-sc.pp.highly_variable_genes(adata_train, n_top_genes = 1000)
-adata_train = adata_train[:, adata_train.var.highly_variable]
+sc.pp.highly_variable_genes(adata_target, n_top_genes = 1000)
+adata_target = adata_target[:, adata_target.var.highly_variable]
 
-sc.pp.scale(adata_train, max_value=10)
+sc.pp.scale(adata_target, max_value=10)
 ```
 
 - ### 1.7. Call SCellBOW_cluster()
