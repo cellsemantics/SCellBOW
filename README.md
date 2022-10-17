@@ -101,7 +101,7 @@ SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_
 
 ## API example usage
 
-For step-by-step tutorials on how SCellBOW can perform clustering and phenotypic algebra can be found in [Tutorial](https://eleozzr.github.io/desc/tutorial.html).
+For step-by-step tutorials on how SCellBOW can perform clustering and phenotypic algebra can be found in [Tutorial](tutorial/SCellBOW_tutorial.md).
 
 
 Here is example usage of SCellBOW in Python:
