@@ -62,22 +62,22 @@ Here is example usage of SCellBOW in Python:
 
 ```bash
 
-import scanpy as sc
-from SCellBOW_cluster import SCellBOW_clust
-from SCellBOW_pretrain import SCellBOW_pretrain
-from SCellBOW_algebra import SCellBOW_algebra
+import SCellBOW as sb
 
-adata_source=sc.read('./dataset/adata_source_CL.h5ad')
-t=SCellBOW_pretrain(adata_source, 'dummy', vec_size=300, n_worker=1, iter=20)
+# List of datasets:
+adatas = [ list of scanpy.AnnData ]
 
-adata_target=sc.read('./dataset/adata_target_CL.h5ad')
-scl = SCellBOW_clust(adata_target, 'dummy')
-adata = scl.SCellBOW_target()
-
-adata_train = sc.read("./dataset/adata_train_PA.h5ad")
-adata_test = sc.read("./dataset/adata_test_PA.h5ad")
+sb.SCellBOW_pretrain(adata, 
+                     save_dir, 
+                     vec_size=300, 
+                     n_worker=1, 
+                     iter=20)
 
 
+adata_target = sb.SCellBOW_clust(adata_target,
+                                 save_dir,iter=40,resolution=1.0,neighbors=15).run()
+
+how to set a 
 p=SCellBOW_algebra(adata_test,adata_train,"dd2",Type="clusters",bootstrap_samples=5,n_top_features=50)
 
 t=p.SCellBOW_phenotype_algebra()
