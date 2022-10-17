@@ -75,12 +75,20 @@ sb.SCellBOW_pretrain(adata,
 
 
 adata_target = sb.SCellBOW_clust(adata_target,
-                                 save_dir,iter=40,resolution=1.0,neighbors=15).run()
+                                 save_dir,
+                                 iter=40,
+                                 resolution=1.0,
+                                 neighbors=15).run()
 
-how to set a 
-p=SCellBOW_algebra(adata_test,adata_train,"dd2",Type="clusters",bootstrap_samples=5,n_top_features=50)
 
-t=p.SCellBOW_phenotype_algebra()
+predicted_risk_score = sb.SCellBOW_algebra(adata_test,
+                                           adata_train,
+                                           "dd2",
+                                           Type="clusters",
+                                           bootstrap_samples=5,
+                                           n_top_features=50).run()
+
+
 ```
 
 
