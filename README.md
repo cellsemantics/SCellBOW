@@ -36,8 +36,7 @@ Python packages:
 - scikit-survival = 0.18.0
 - imbalanced-learn = 0.9.1
 - xgbse = 0.2.3 
-<!-- #- collections
-#- pickle -->
+- tqdm = 4.64.1
 - matplotlib = 3.5.2
 
 
