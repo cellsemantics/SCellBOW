@@ -27,14 +27,18 @@ To install SCellBOW package you must make sure that your python version is 3.8 +
 ### Prerequisites
 
 Python packages:
-- pandas = 0.22.0, 
-- numpy = 1.16.4, 
-- gensim = 2.2.4, 
-- scipy = 1.0.1, 
-- scanpy = 1.3.1+21.g1df151f, 
-- anndata = 0.6.20, 
-- natsort = 5.2.0, 
-- sklearn = 0.19.1
+- pandas = 1.4.3, 
+- numpy = 1.23.3, 
+- gensim = 4.2.0,  
+- scanpy = 1.9.1,
+- nltk = 3.7
+- scikit-learn = 1.1.1  
+- scikit-survival = 0.18.0
+- imbalanced-learn = 0.9.1
+- xgbse = 0.2.3 
+#- collections
+#- pickle
+- matplotlib = 3.5.2
 
 
 
