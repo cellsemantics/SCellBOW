@@ -53,8 +53,8 @@ pip install SCellBOW
 If for some reason this doesn't work, you can also download the package from Github and install it locally:
 
 ```bash
-git clone https://github.com/eleozzr/desc
-cd desc
+git clone https://github.com/cellsemantics/SCellBOW.git
+cd SCellBOW
 pip install .
 ```
 <br>
