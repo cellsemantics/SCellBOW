@@ -52,9 +52,11 @@ pip install SCellBOW
 If for some reason this doesn't work, you can also download the package from Github and install it locally:
 
 ```bash
+conda create -n scellbow python=3.8
+source activate scellbow
 git clone https://github.com/cellsemantics/SCellBOW.git
-cd SCellBOW
-pip install .
+cd PyPackage/SCellBOW
+pip3 install .
 ```
 <br>
 
