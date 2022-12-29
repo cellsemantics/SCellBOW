@@ -88,7 +88,7 @@ SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).ru
 > - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
 
 ```bash
-SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
+SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters', algebra=["type1","type2"],  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
 ```
 > Rank the single cell clusters or subtypes based on their relative aggressiveness.
 > #### Input Arguments
@@ -97,6 +97,7 @@ SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_
 > - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
 > - **save_dir:** name of directory where the source model is saved
 > - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters)
+> - **algebra:** values from column *Type* from *adata_test.obs* which we want to combine (*optional*). 
 > - **bootstrap_samples:** number of bootstrap iterations. Defaults to 50 for SCellBOW. 
 > - **split:** split on single cell dataset. Defaults to 80:20 split for SCellBOW.
 > - **unit:** type of dataset UMI, TPM, FPKM, etc. Default to UMI for SCellBOW. 
@@ -130,8 +131,7 @@ sb.SCellBOW_pretrain(adata_source, save_dir = 'path/to/model').run()
 adata_target = sb.SCellBOW_clust(adata_target, save_dir = 'path/to/model').run()
 
 # Predict the risk score for the subtypes in the target dataset
-median_score, scores = sb.SCellBOW_algebra(adata_target, adata_bulkseq, Type = column_name,
-                                           algebra=["type1","type2"], save_dir = 'path/to/model').run()
+median_score, scores = sb.SCellBOW_algebra(adata_target, adata_bulkseq, save_dir = 'path/to/model').run()
 
 ```
 <br>
