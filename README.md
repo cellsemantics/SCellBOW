@@ -96,7 +96,7 @@ SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters', algebra=["t
 > - **adata_test:**  the unprocessed scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
 > - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
 > - **save_dir:** name of directory where the source model is saved
-> - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters)
+> - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters). Defaults to 'clusters' for SCellBOW.
 > - **algebra:** values from column *Type* from *adata_test.obs* which we want to combine (*optional*). 
 > - **bootstrap_samples:** number of bootstrap iterations. Defaults to 50 for SCellBOW. 
 > - **split:** split on single cell dataset. Defaults to 80:20 split for SCellBOW.
