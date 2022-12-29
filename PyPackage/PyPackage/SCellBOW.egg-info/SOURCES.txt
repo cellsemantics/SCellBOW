@@ -1,0 +1,9 @@
+README.md
+setup.py
+SCellBOW/SCellBOW.py
+SCellBOW/__init__.py
+SCellBOW.egg-info/PKG-INFO
+SCellBOW.egg-info/SOURCES.txt
+SCellBOW.egg-info/dependency_links.txt
+SCellBOW.egg-info/requires.txt
+SCellBOW.egg-info/top_level.txt
