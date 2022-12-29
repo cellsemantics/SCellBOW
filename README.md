@@ -131,7 +131,7 @@ adata_target = sb.SCellBOW_clust(adata_target, save_dir = 'path/to/model').run()
 
 # Predict the risk score for the subtypes in the target dataset
 median_score, scores = sb.SCellBOW_algebra(adata_target, adata_bulkseq, Type = column_name,
-                                           algebra=["type1","type2"],save_dir = 'path/to/model').run()
+                                           algebra=["type1","type2"], save_dir = 'path/to/model').run()
 
 ```
 <br>
