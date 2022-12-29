@@ -3,16 +3,6 @@
 <hr>
 <br>
  
- ## title {.tabset .tabset-fade}
-content above tabbed region.
-
-### tab Social-Media
-
-tab content Social-Media
-
-### tab Contact
-
-tab content  Contact
 
 # 1. Getting started with SCellBOW
 <hr>
@@ -73,7 +63,7 @@ SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_
 > - **n_top_features:** number of top common highly variables genes in bulk RNAseq and single cell RNAseq datasets. Defaults to 1000 for SCellBOW.
 > - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
 
-# Full tutorial {.tabset}
+# Full tutorial 
 <hr>
 
 For step-by-step guide on how SCellBOW perform clustering and phenotype algebra on full single-cell dataset.
