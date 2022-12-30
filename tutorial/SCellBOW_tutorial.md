@@ -189,7 +189,7 @@ adata_test = sc.read("/path/to/directory/adata_target.h5ad")
 ```python
 adata_surv = sc.read("/path/to/directory/adata_survival.h5ad")
 ```
-Note that for phenotype algebra the bulk expression dataset has to be in `anndata` format and the column name of the `.obs` should be followed strictly as follows-
+Note that for phenotype algebra the bulk expression dataset has to be in the `AnnData` object format. Ensure that the column names in the .obs attribute follow the specific naming convention as below-
 
 |       |time     |status|
 | --    | --      | --|
@@ -214,8 +214,8 @@ label = pd.read_csv('label.csv')
 adata = sc.AnnData(df, obs_names=df.index, var_names=df.columns)
 
 # Add sample annotations to the AnnData object
-adata.obs['time'] = label['survival_time']
-adata.obs['status'] = label['survival_status']
+adata.obs = label
+adata.obs = adata.obs.rename(columns={'old_colname_time': 'time', 'old_colname_status': 'status'})
 ```
 
 
