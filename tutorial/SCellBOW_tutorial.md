@@ -218,5 +218,9 @@ plt.xticks(rotation=90, size=10)
 plt.show()
 ```
 
-
+Please see our jupyter notebook example.
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
