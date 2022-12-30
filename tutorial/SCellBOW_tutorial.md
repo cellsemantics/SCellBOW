@@ -192,6 +192,7 @@ median_score, scores = sb.SCellBOW_algebra(adata_test,
                                            save_dir ='dummy', 
                                            Type='clusters',
                                            algebra = [],
+                                           use_raw = True,
                                            bootstrap_samples=50, 
                                            split=0.2, 
                                            unit="UMI", 
@@ -205,9 +206,9 @@ median_score, scores = sb.SCellBOW_algebra(adata_test,
 ```python
 median_score.sort_values(ascending=True, inplace=True)
 scores = scores[median_score.index]
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(4,4))
 scores.boxplot(patch_artist=True, notch=True)
-plt.xticks(rotation=90, size=20)
+plt.xticks(rotation=90, size=10)
 plt.show()
 ```
 
