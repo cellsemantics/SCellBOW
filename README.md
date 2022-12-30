@@ -118,10 +118,15 @@ Here is example usage of SCellBOW in Python:
 
 import SCellBOW as sb
 
+User inputs:
+
 # List of datasets:
 adata_source = [scanpy.AnnData for source dataset]
 adata_target = [scanpy.AnnData for source dataset]
 adata_surv = [AnnData for bulk RNAseq dataset with survival information]
+
+# Variable:
+colname = user-defined attribute from adata_target
 
 
 # Creating pre-trained model from source dataset
@@ -130,8 +135,8 @@ sb.SCellBOW_pretrain(adata_source, save_dir = 'path/to/model').run()
 # Retraining the model with target dataset  
 adata_target = sb.SCellBOW_clust(adata_target, save_dir = 'path/to/model').run()
 
-# Predict the risk score for the subtypes in the target dataset
-median_score, scores = sb.SCellBOW_algebra(adata_target, adata_surv, save_dir = 'path/to/model').run()
+# Predict the risk score for the user-defined attribute in the target dataset
+median_score, scores = sb.SCellBOW_algebra(adata_target, adata_surv, Type = colname,  save_dir = 'path/to/model').run()
 
 ```
 <br>
