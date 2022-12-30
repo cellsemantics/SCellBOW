@@ -170,20 +170,20 @@ import scanpy as sc
 import matplotlib.pyplot as plt
 ```
 
-- ###  1.2. Read source input dataset
+- ###  2.2. Read source input dataset
 
 ```python
 adata_source = sc.read("/path/to/directory/adata_source.h5ad")
 ```
 
-- ### 2.2. Read single-cell input dataset
+- ### 2.3. Read single-cell input dataset
 
 
 ```python
 adata_test = sc.read("/path/to/directory/adata_target.h5ad")
 ```
 
-- ### 2.3. Read bulk survival input dataset
+- ### 2.4. Read bulk survival input dataset
 
 
 ```python
@@ -220,7 +220,7 @@ adata.obs = adata.obs.rename(columns={'old_colname_time': 'time', 'old_colname_s
 ```
 
 
-- ### 2.4. Call SCellBOW_algebra() 
+- ### 2.5. Call SCellBOW_algebra() 
 
 
 ```python
@@ -236,7 +236,7 @@ median_score, scores = sb.SCellBOW_algebra(adata_target,
                                            iter=20).run()
 ```
 
-- ### 2.5. Visualization
+- ### 2.6. Visualization
 
 
 ```python
