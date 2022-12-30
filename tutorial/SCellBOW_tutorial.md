@@ -219,8 +219,9 @@ plt.show()
 ```
 
 Please see our **jupyter notebook** examples.
-| 'Notebook' | Description |
+| Notebooks | Description |
 | --- | --- |
-| [Clusters](RUN-SCellBOW-cluster.ipynb) | List all new or modified files |
-| [phenotype algebra](tutorial/SCellBOW_tutorial.md) | Show file differences that haven't been staged |
+| `[Clusters](RUN-SCellBOW-cluster.ipynb)` | Run SCellBOW cluster on pancreas dataset |
+| `[Phenotype algebra](RUN-SCellBOW-algebra.ipynb)` | Run phenotype algebra on simulatedprostate cancer molecular subtypes |
+| `[Phenotype algebra on clusters](RUN-cluster_with_algebra.ipynb)` | Run phenotype algebra on SCellBOW clusters of simulated prostate cancer  |
 
