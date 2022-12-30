@@ -88,7 +88,7 @@ SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).ru
 > - **iter:** Number of iterations (epochs) over the corpus. Defaults to 20 for SCellBOW.
 
 ```bash
-SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters', algebra=["type1","type2"], bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
+SCellBOW_algebra(adata_test, adata_train, save_dir, type='clusters', algebra=["type1","type2"], bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
 ```
 > Rank the single cell clusters or subtypes based on their relative aggressiveness.
 > #### Input Arguments
