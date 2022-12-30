@@ -222,6 +222,6 @@ Please see our **jupyter notebook** examples.
 | Notebooks | Description |
 | --- | --- |
 | [Clusters](RUN-SCellBOW-cluster.ipynb) | Run SCellBOW cluster on pancreas dataset |
-| [Phenotype algebra](RUN-SCellBOW-algebra.ipynb) | Phenotype algebra on molecular subtypes of prostate cancer run on a simulated prostate cancer dataset |
-| [Phenotype algebra on clusters](RUN-cluster_with_algebra.ipynb) | Phenotype algebra on SCellBOW clusters run on a simulated prostate cancer dataset  |
+| [Phenotype algebra](RUN-SCellBOW-algebra.ipynb) | Run phenotype algebra on molecular subtypes of prostate cancer on a simulated prostate cancer dataset |
+| [Phenotype algebra on clusters](RUN-cluster_with_algebra.ipynb) | Run phenotype algebra and SCellBOW clusters on a simulated prostate cancer dataset  |
 
