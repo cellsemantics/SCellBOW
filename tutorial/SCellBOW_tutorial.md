@@ -219,8 +219,8 @@ plt.show()
 ```
 
 Please see our jupyter notebook example.
-| Command | Description |
+| Notebook | Description |
 | --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| [cluster](tutorial/RUN-SCellBOW-cluster.ipynb) | List all new or modified files |
+| [phenotype algebra](tutorial/SCellBOW_tutorial.md) | Show file differences that haven't been staged |
 
