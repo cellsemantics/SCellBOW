@@ -189,7 +189,7 @@ adata_test = sc.read("/path/to/directory/adata_target.h5ad")
 ```python
 adata_surv = sc.read("/path/to/directory/adata_survival.h5ad")
 ```
-Please note that for phenotype algebra the bulk expression dataset has to be in anndata format and the column name of the `.obs` should be followed strictly as follows-
+Note that for phenotype algebra the bulk expression dataset has to be in `anndata` format and the column name of the `.obs` should be followed strictly as follows-
 
 |       |time     |status|
 | --    | --      | --|
@@ -198,6 +198,26 @@ Please note that for phenotype algebra the bulk expression dataset has to be in 
 |2_bulk |4.533509 |	1 |
 |3_bulk |22.996058|	1 |
 |4_bulk |28.318003|	0 |
+
+Follow the code snippet to generate the survival data:
+```
+import scanpy as sc
+import pandas as pd
+
+# Load bulk expression matrix into a Pandas dataframe
+df = pd.read_csv('data.csv')
+
+# Load the corresponding survival information into a Pandas dataframe
+label = pd.read_csv('label.csv')
+
+# Create an AnnData object from the dataframe
+adata = sc.AnnData(df, obs_names=df.index, var_names=df.columns)
+
+# Add sample annotations to the AnnData object
+adata.obs['time'] = label['survival_time']
+adata.obs['status'] = label['survival_status']
+```
+
 
 - ### 2.4. Call SCellBOW_algebra() 
 
