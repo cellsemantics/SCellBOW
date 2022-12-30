@@ -189,6 +189,14 @@ adata_test = sc.read("/path/to/directory/adata_target.h5ad")
 ```python
 adata_surv = sc.read("/path/to/directory/adata_survival.h5ad")
 ```
+Please note that for phenotype algebra the bulk expression dataset has to be in anndata format and the column name of the `.obs` should be followed strictly as follows-
+
+|       |time     |status|
+|0_bulk |8.442838 |	1
+|1_bulk |29.829172|	1
+|2_bulk |4.533509 |	1
+|3_bulk |22.996058|	1
+|4_bulk |28.318003|	0
 
 - ### 2.4. Call SCellBOW_algebra() 
 
