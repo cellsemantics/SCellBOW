@@ -254,3 +254,8 @@ Please see our **jupyter notebook** examples.
 | [Phenotype algebra](RUN-SCellBOW-algebra.ipynb) | Run phenotype algebra on molecular subtypes of prostate cancer on a simulated prostate cancer dataset |
 | [Phenotype algebra on clusters](RUN-cluster_with_algebra.ipynb) | Run phenotype algebra and SCellBOW clusters on a simulated prostate cancer dataset  |
 
+<br>
+
+## Contributing
+Souce code: [Github](https://github.com/cellsemantics/SCellBOW)  
+For further information contact debarka@iiitd.ac.in or namrata.bhattacharya@hdr.qut.eu.au. 
