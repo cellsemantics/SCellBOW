@@ -47,7 +47,7 @@ SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).ru
 
 
 ```python
-SCellBOW_algebra(adata_target, adata_surv, save_dir, Type,  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
+SCellBOW_algebra(adata_target, adata_surv, save_dir, type,  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
 ```
 
 > Rank the single cell clusters or subtypes based on their relative aggressiveness.
@@ -56,7 +56,7 @@ SCellBOW_algebra(adata_target, adata_surv, save_dir, Type,  bootstrap_samples=50
 > - **adata_test:**  the scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
 > - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
 > - **save_dir:** name of directory where the source model is saved
-> - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters).
+> - **type:** column from *adata_test.obs* on which we want to classify (subtype/clusters).
 > - **algebra:** values from column *Type* from *adata_test.obs* which we want to combine (*optional*). 
 > - **bootstrap_samples:** number of bootstrap iterations. Defaults to 50 for SCellBOW. 
 > - **split:** split on single cell dataset. Defaults to 80:20 split for SCellBOW.
@@ -227,7 +227,7 @@ adata.obs = adata.obs.rename(columns={'old_colname_time': 'time', 'old_colname_s
 median_score, scores = sb.SCellBOW_algebra(adata_target,
                                            adata_surv,
                                            save_dir ='dummy', 
-                                           Type='subtype',
+                                           type='subtype',
                                            algebra = [],
                                            bootstrap_samples=50, 
                                            split=0.2, 
