@@ -218,9 +218,9 @@ plt.xticks(rotation=90, size=10)
 plt.show()
 ```
 
-Please see our jupyter notebook example.
-| Notebook | Description |
+Please see our **jupyter notebook** examples.
+| 'Notebook' | Description |
 | --- | --- |
-| [cluster](tutorial/RUN-SCellBOW-cluster.ipynb) | List all new or modified files |
+| [Clusters](RUN-SCellBOW-cluster.ipynb) | List all new or modified files |
 | [phenotype algebra](tutorial/SCellBOW_tutorial.md) | Show file differences that haven't been staged |
 
