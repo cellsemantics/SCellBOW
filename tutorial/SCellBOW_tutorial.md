@@ -192,7 +192,7 @@ adata_surv = sc.read("/path/to/directory/adata_survival.h5ad")
 Note that for phenotype algebra the bulk expression dataset has to be in the `AnnData` object format. Ensure that the column names in the .obs attribute follow the specific naming convention as below-
 
 |       |time     |status|
-| --    | --      | --|
+| :--:    | :--:      | :--:|
 |0_bulk |8.442838 |	1 |
 |1_bulk |29.829172|	1 |
 |2_bulk |4.533509 |	1 |
