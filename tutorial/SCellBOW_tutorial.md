@@ -174,7 +174,7 @@ import matplotlib.pyplot as plt
 
 ```python
 adata_source = sc.read("/path/to/directory/adata_source.h5ad")
-
+```
 
 - ### 2.2. Read single-cell input dataset
 
