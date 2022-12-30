@@ -96,7 +96,7 @@ SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters', algebra=["t
 > - **adata_test:**  the unprocessed scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
 > - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
 > - **save_dir:** name of directory where the source model is saved
-> - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters). 
+> - **type:** column from *adata_test.obs* on which we want to classify (subtype/clusters). 
 > - **algebra:** values from column *Type* from *adata_test.obs* which we want to combine (*optional*). 
 > - **bootstrap_samples:** number of bootstrap iterations. Defaults to 50 for SCellBOW. 
 > - **split:** split on single cell dataset. Defaults to 80:20 split for SCellBOW.
@@ -136,7 +136,7 @@ sb.SCellBOW_pretrain(adata_source, save_dir = 'path/to/model').run()
 adata_target = sb.SCellBOW_clust(adata_target, save_dir = 'path/to/model').run()
 
 # Predict the risk score for the user-defined attribute in the target dataset
-median_score, scores = sb.SCellBOW_algebra(adata_target, adata_surv, Type = colname,  save_dir = 'path/to/model').run()
+median_score, scores = sb.SCellBOW_algebra(adata_target, adata_surv, type = colname,  save_dir = 'path/to/model').run()
 
 ```
 <br>
