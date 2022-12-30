@@ -39,7 +39,7 @@ SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).ru
 > Transfer learning the weights of pre-trained to obtain single-cell embeddings for the target dataset. 
 > #### Input Arguments
 > The arguments are as follows:
-> - **adata_target:**  the preprocessed scanpy.anndata for source dataset
+> - **adata_target:**  the preprocessed scanpy.anndata for target dataset
 > - **save_dir:** name of directory where the source model is saved
 > - **resolution:** granularity of the leiden clustering. Defaults to 1.0 for SCellBOW. 
 > - **neighbors:** number of neighboring data points. Defaults to 15 for SCellBOW. 
@@ -47,13 +47,13 @@ SCellBOW_cluster(adata_target,save_dir,resolution=1.0,neighbors=15, iter=20,).ru
 
 
 ```python
-SCellBOW_algebra(adata_test, adata_train, save_dir, Type='clusters',  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
+SCellBOW_algebra(adata_target, adata_surv, save_dir, Type='clusters',  bootstrap_samples=50, split=0.2, unit="UMI", n_top_features=1000, iter=20).run()
 ```
 
 > Rank the single cell clusters or subtypes based on their relative aggressiveness.
 > #### Input Arguments
 > The arguments are as follows:
-> - **adata_test:**  the unprocessed scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
+> - **adata_test:**  the scanpy.anndata for single-cell data with the annotation(subtype,cluster) in *adata_test.obs*
 > - **adata_train:**  the anndata for bulk RNAseq gene expression matrix with survival data in *adata_train.obs*
 > - **save_dir:** name of directory where the source model is saved
 > - **Type:** column from *adata_test.obs* on which we want to classify (subtype/clusters).
@@ -171,26 +171,32 @@ import scanpy as sc
 import matplotlib.pyplot as plt
 ```
 
+- ###  1.2. Read source input dataset
+
+```python
+adata_source = sc.read("/path/to/directory/adata_source.h5ad")
+
+
 - ### 2.2. Read single-cell input dataset
 
 
 ```python
-adata_test = sc.read("/path/to/directory/adata_test.h5ad")
+adata_test = sc.read("/path/to/directory/adata_target.h5ad")
 ```
 
-- ### 2.3. Read bulk input dataset
+- ### 2.3. Read bulk survival input dataset
 
 
 ```python
-adata_train = sc.read("/path/to/directory/adata_train.h5ad")
+adata_surv = sc.read("/path/to/directory/adata_survival.h5ad")
 ```
 
 - ### 2.4. Call SCellBOW_algebra() 
 
 
 ```python
-median_score, scores = sb.SCellBOW_algebra(adata_test,
-                                           adata_train,
+median_score, scores = sb.SCellBOW_algebra(adata_target,
+                                           adata_surv,
                                            save_dir ='dummy', 
                                            Type='clusters',
                                            algebra = [],
