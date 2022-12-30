@@ -200,7 +200,8 @@ Note that for phenotype algebra the bulk expression dataset has to be in the `An
 |4_bulk |28.318003|	0 |
 
 Follow the code snippet to generate the survival data:
-```
+
+```python
 import scanpy as sc
 import pandas as pd
 
