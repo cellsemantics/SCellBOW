@@ -256,6 +256,9 @@ Please see our **jupyter notebook** examples.
 | [Phenotype algebra on clusters](RUN-cluster_with_algebra.ipynb) | Run phenotype algebra and SCellBOW clusters on a simulated prostate cancer dataset  |
 
 <br>
+Note: Create a folder as the save_dir before running the script.
+
+<br>
 
 ## Contributing
 Souce code: [Github](https://github.com/cellsemantics/SCellBOW)  
