@@ -143,7 +143,7 @@ median_score, scores = sb.SCellBOW_algebra(adata_target, adata_surv, type = coln
 
 ## Contributing
 Souce code: [Github](https://github.com/cellsemantics/SCellBOW)  
-For further information contact debarka@iiitd.ac.in or namrata.bhattacharya@hdr.qut.eu.au. 
+For further information contact debarka@iiitd.ac.in or n.bhattacharya@qut.eu.au. 
 
 
 
